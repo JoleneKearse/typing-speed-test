@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "sora";
+  src: url("./assets/fonts/Sora-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-neutral-100: #ffffff;
+  --color-neutral-400: #949497;
+  --color-neutral-500: #717178;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #121212;
+  --color-blue-400: #4ca6ff;
+  --color-blue-500: #177dff;
+  --color-red-500: #d64d5b;
+  --color-green-500: #4dd67b;
+  --color-yellow-400: #f4dc73;
+
+  --font-sora: "sora", sans-serif;
+
+  --text-preset-1: 40px;
+  --text-preset-1--line-height: 130%;
+  --text-preset-1--letter-spacing: 0.4px;
+
+  --text-preset-1-mobile: 24px;
+  --text-preset-1-mobile--line-height: 120%;
+  --text-preset-1-mobile--letter-spacing: 0.32px;
+
+  --text-preset-regular: 40px;
+  --text-preset-regular--line-height: 136%;
+  --text-preset-regular--letter-spacing: 0.4px;
+
+  --text-preset-regular-mobile: 32px;
+  --text-preset-regular-mobile--line-height: 136%;
+  --text-preset-regular-mobile--letter-spacing: 0.4px;
+
+  --text-preset-2: 24px;
+  --text-preset-2--line-height: 100%;
+  --text-preset-2--letter-spacing: 0px;
+
+  --text-preset-3: 20px;
+  --text-preset-3--line-height: 120%;
+  --text-preset-3--letter-spacing: -0.6px;
+
+  --text-preset-3-mobile: 16px;
+  --text-preset-3-mobile--line-height: 120%;
+  --text-preset-3-mobile--letter-spacing: -0.48px;
+
+  --text-preset-3-semibold: 20px;
+  --text-preset-3-semibold--line-height: 120%;
+  --text-preset-3-semibold--letter-spacing: -0.3px;
+
+  --text-preset-4: 18px;
+  --text-preset-4--line-height: 120%;
+  --text-preset-4--letter-spacing: -0.6px;
+
+  --text-preset-5: 16px;
+  --text-preset-5--line-height: 120%;
+  --text-preset-5--letter-spacing: -0.48px;
+
+  --text-preset-6: 12px;
+  --text-preset-6--line-height: 120%;
+  --text-preset-6--letter-spacing: 0px;
+
+  --radius-10: 10px;
+  --radius-20: 20px;
+
+  --spacing-0: 0px;
+  --spacing-25: 2px;
+  --spacing-50: 4px;
+  --spacing-75: 6px;
+  --spacing-100: 8px;
+  --spacing-125: 10px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-800: 64px;
+  --spacing-1000: 80px;
+  --spacing-1200: 96px;
+  --spacing-1400: 112px;
+  --spacing-1600: 128px;
+  --spacing-1800: 140px;
+}

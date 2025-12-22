@@ -1,11 +1,15 @@
 // import { useState } from 'react'
 
+import Header from "./components/Header"
+import Info from "./components/Info"
+
 function App() {
 
   return (
-    <>
-      <p className="text-cyan-800 text-preset-1-mobile font-bold font-sora">Hello Typing Speed Test</p>
-    </>
+    <div className="flex flex-col gap-6">
+      <Header />
+      <Info />
+    </div>
   )
 }
 

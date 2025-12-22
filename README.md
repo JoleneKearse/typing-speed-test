@@ -4,21 +4,13 @@
 
 ## Welcome! 👋
 
-Thanks for checking out this front-end coding challenge.
-
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
-
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+Thanks for checking out this coding challenge from [Frontend Mentor](https://www.frontendmentor.io)!
 
 ## The challenge
 
-Your challenge is to build out this typing speed test app and get it looking as close to the design as possible.
+The challenge was to build out this typing speed test app and get it looking as close to the design as possible.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-We store the passage data in a local `data.json` file. You can use that to randomly select passages of varying difficulty.
-
-Your users should be able to:
+Users should be able to:
 
 #### Test Controls
 
@@ -76,44 +68,27 @@ A `data.json` file is provided with passages organized by difficulty. Each passa
 
 The personal best score should persist across browser sessions using `localStorage`. When a user beats their high score, the new value should be saved and displayed on subsequent visits.
 
-### Want some support on the challenge? 
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
-## Where to find everything
+## My Challenges
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
-
-If you would like the Figma design file to gain experience using professional tools and build more accurate projects faster, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
-
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
-
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
-
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
 
 ## Building your project
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Styling the radial button for the mobile dropdowns
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+I loved using [Shadcn](https://ui.shadcn.com/) for UI elements in my last project and wanted to get some more experience customizing it.
 
-## Deploying your project
+The **Radio Group** variant of their **Dropdown Menu** was *almost* perfect.  The only issue was the radios themselves!
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+By default they had a solid-looking ![alt text](image.png) circle for the selected item.  Alas, that didn't match the design!
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+I noticed it had a `<Circle></Circle>` element with the property `fill="currentColor"`, I tried switching that to the Tailwind CSS blue color, but it was missing the 'black inside'. I tried using `bg-radial`, but that completely broke it.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+Fortunately, Shadcn let's you mess with the internals, so I found the `Circle` was imported from `lucide-react`. I Googled that and found where I could modify it and copy the result directly in `components/ui/dropdown-menu`!
+
+![alt text](image-1.png)
 
 ## Create a custom `README.md`
 

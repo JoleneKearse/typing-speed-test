@@ -16,21 +16,21 @@ const SettingsLargeScreens = () => {
           <ToggleGroupItem
             value="Easy"
             aria-label="Easy"
-            className="data-[state=on]:text-blue-500 hover:text-blue-500"
+            className="data-[state=on]:text-blue-500 hover:text-blue-500 focus:outline-2 focus:outline-blue-500 focus:text-neutral-100"
           >
             Easy
           </ToggleGroupItem>
           <ToggleGroupItem
             value="Medium"
             aria-label="Medium"
-            className="data-[state=on]:text-blue-500 hover:text-blue-500"
+            className="data-[state=on]:text-blue-500 hover:text-blue-500 focus:outline-2 focus:outline-blue-500 focus:text-neutral-100"
           >
             Medium
           </ToggleGroupItem>
           <ToggleGroupItem
             value="Hard"
             aria-label="Hard"
-            className="data-[state=on]:text-blue-500 hover:text-blue-500"
+            className="data-[state=on]:text-blue-500 hover:text-blue-500 focus:outline-2 focus:outline-blue-500 focus:text-neutral-100"
           >
             Hard
           </ToggleGroupItem>
@@ -50,14 +50,14 @@ const SettingsLargeScreens = () => {
           <ToggleGroupItem
             value="Timed(60s)"
             aria-label="Timed"
-            className="data-[state=on]:text-blue-500 hover:text-blue-500"
+            className="data-[state=on]:text-blue-500 hover:text-blue-500 focus:outline-2 focus:outline-blue-500 focus:text-neutral-100"
           >
             Timed(60s)
           </ToggleGroupItem>
           <ToggleGroupItem
             value="Passage"
             aria-label="Passage"
-            className="data-[state=on]:text-blue-500 hover:text-blue-500"
+            className="data-[state=on]:text-blue-500 hover:text-blue-500 focus:outline-2 focus:outline-blue-500 focus:text-neutral-100"
           >
             Passage
           </ToggleGroupItem>

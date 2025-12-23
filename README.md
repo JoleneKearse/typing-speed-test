@@ -6,6 +6,17 @@
 
 Thanks for checking out this coding challenge from [Frontend Mentor](https://www.frontendmentor.io)!
 
+## My tech stack 🛠️
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Shadcn/ui](https://img.shields.io/badge/shadcn/ui-%23000000?style=for-the-badge&logo=shadcnui&logoColor=white)
+
+I knew I'd be using TypeScript and Tailwind CSS as those are my go-to's. But I did second guess React for a moment or two, before deciding it would be great for all the DOM updates this project has going on.
+
+I was excited to use **Shadcn** as I'd finally used it on my last project and really wanted to dive into the internals of other components. In this project I used Button, Dropdown Menu and Toggle Group.
+
 ## The challenge
 
 The challenge was to build out this typing speed test app and get it looking as close to the design as possible.
@@ -48,10 +59,10 @@ A `data.json` file is provided with passages organized by difficulty. Each passa
 }
 ```
 
-| Property | Type | Description |
-| --- | --- | --- |
-| `id` | string | Unique identifier for the passage (e.g., "easy-1", "medium-3", "hard-10") |
-| `text` | string | The passage text the user will type |
+| Property | Type   | Description                                                               |
+| -------- | ------ | ------------------------------------------------------------------------- |
+| `id`     | string | Unique identifier for the passage (e.g., "easy-1", "medium-3", "hard-10") |
+| `text`   | string | The passage text the user will type                                       |
 
 ### Expected Behaviors
 
@@ -68,21 +79,15 @@ A `data.json` file is provided with passages organized by difficulty. Each passa
 
 The personal best score should persist across browser sessions using `localStorage`. When a user beats their high score, the new value should be saved and displayed on subsequent visits.
 
-
-
 ## My Challenges
-
-
-
-## Building your project
 
 ### Styling the radial button for the mobile dropdowns
 
 I loved using [Shadcn](https://ui.shadcn.com/) for UI elements in my last project and wanted to get some more experience customizing it.
 
-The **Radio Group** variant of their **Dropdown Menu** was *almost* perfect.  The only issue was the radios themselves!
+The **Radio Group** variant of their **Dropdown Menu** was _almost_ perfect. The only issue was the radios themselves!
 
-By default they had a solid-looking ![alt text](image.png) circle for the selected item.  Alas, that didn't match the design!
+By default they had a solid-looking ![alt text](image.png) circle for the selected item. Alas, that didn't match the design!
 
 I noticed it had a `<Circle></Circle>` element with the property `fill="currentColor"`, I tried switching that to the Tailwind CSS blue color, but it was missing the 'black inside'. I tried using `bg-radial`, but that completely broke it.
 
@@ -90,30 +95,24 @@ Fortunately, Shadcn let's you mess with the internals, so I found the `Circle` w
 
 ![alt text](image-1.png)
 
-## Create a custom `README.md`
+### Dealing with all those vertical dividers
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+_I'm still a bit of a loss here, as I got things working, but only working-ish!_
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+In my `Stats` component, I was able to use `border-l` and `border-r` as expected, but it was difficult to get them to line exactly up as the design requires. I added these borders to the middle item and switched from `flex` to `grid`, but they are still at little off. I used the `spacing` specs from the Design System in Figma, but found I'd have to **magic number** it a bit more than I was comfortable with. In the end, it works and doesn't really affect the UX.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+I used a _very hacky_ solution in my `SettingsLargeScreens` component. I started trying to add a `-border-r` to one of the `<ToggleGroup>`s, but it didn't immediately appear. So, I got this _silly idea_ of styling a `|` instead. This worked really well so I let it be.
 
 ## Sharing your solution
 
 There are multiple places you can share your solution:
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
+1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community).
 2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
 3. Share your solution on other social channels like LinkedIn.
 4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
 
 The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
 

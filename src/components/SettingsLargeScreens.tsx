@@ -54,7 +54,11 @@ const SettingsLargeScreens = () => {
           >
             Timed(60s)
           </ToggleGroupItem>
-          <ToggleGroupItem value="Passage" aria-label="Passage">
+          <ToggleGroupItem
+            value="Passage"
+            aria-label="Passage"
+            className="data-[state=on]:text-blue-500"
+          >
             Passage
           </ToggleGroupItem>
         </ToggleGroup>

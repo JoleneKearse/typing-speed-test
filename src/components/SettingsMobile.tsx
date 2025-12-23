@@ -1,8 +1,8 @@
 import OptionDropdown from "./OptionDropdown";
 
-const Settings = () => {
+const SettingsMobile = () => {
   return (
-    <section className="flex justify-center">
+    <section className="flex justify-center gap-8">
       <OptionDropdown
         label="Hard"
         options={[
@@ -22,4 +22,4 @@ const Settings = () => {
   );
 };
 
-export default Settings;
+export default SettingsMobile;

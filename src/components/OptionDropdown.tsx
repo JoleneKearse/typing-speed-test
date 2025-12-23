@@ -26,7 +26,7 @@ const OptionDropdown = ({ label, options }: OptionDropdownProps) => {
           {position}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="text-neutral-100 bg-neutral-800 w-[250%] -ml-[3.4375rem]">
+      <DropdownMenuContent className="text-neutral-100 bg-neutral-800 w-[145%] -ml-6">
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition} className="">
           {options.map((option) => (
             <DropdownMenuRadioItem key={option.value} value={option.value}>

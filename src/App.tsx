@@ -1,16 +1,15 @@
 // import { useState } from 'react'
 
-import Header from "./components/Header"
-import Info from "./components/Info"
+import Header from "./components/Header";
+import InfoBlock from "./components/InfoBlock";
 
 function App() {
-
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 p-200 mx-auto">
       <Header />
-      <Info />
+      <InfoBlock />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

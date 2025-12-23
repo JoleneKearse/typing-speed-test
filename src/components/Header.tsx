@@ -1,6 +1,6 @@
 const Header = () => {
     return ( 
-        <header className="flex justify-between items-center">
+        <header className="flex justify-between items-center lg:pb-600">
             <img src={window.innerWidth < 600 ? "./src/assets/images/logo-small.svg" : "./src/assets/images/logo-large.svg"} alt="logo" />
             <div className="flex gap-1 items-center">
                 <img src="./src/assets/images/icon-personal-best.svg" alt="golden trophy" />

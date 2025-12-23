@@ -5,7 +5,7 @@ import SettingsLargeScreens from "./SettingsLargeScreens";
 
 const InfoBlock = () => {
   return (
-    <section className="flex flex-col gap-6 w-full outline outline-pink-500">
+    <section className="flex flex-col lg:flex-row gap-6 lg:gap-56 w-full">
       <Stats />
       {window.innerWidth < 600 ? <SettingsMobile /> : <SettingsLargeScreens />}
     </section>

@@ -4,35 +4,50 @@ const SettingsLargeScreens = () => {
   return (
     <section className="flex gap-16 items-center text-neutral-100">
       <div className="flex items-center gap-2">
-        <p className="text-preset-5 text-neutral-400 pl-4 pr-2 pb-4">
-          Difficulty:
-        </p>
+        <p className="text-preset-5 text-neutral-400 pl-4 pr-2">Difficulty:</p>
         <ToggleGroup
           type="single"
           defaultValue="Hard"
           aria-label="Difficulty"
           variant="outline"
         >
-          <ToggleGroupItem value="Easy" aria-label="Easy" className="data-[state=on]:text-blue-500">
+          <ToggleGroupItem
+            value="Easy"
+            aria-label="Easy"
+            className="data-[state=on]:text-blue-500"
+          >
             Easy
           </ToggleGroupItem>
-          <ToggleGroupItem value="Medium" aria-label="Medium" className="data-[state=on]:text-blue-500">
+          <ToggleGroupItem
+            value="Medium"
+            aria-label="Medium"
+            className="data-[state=on]:text-blue-500"
+          >
             Medium
           </ToggleGroupItem>
-          <ToggleGroupItem value="Hard" aria-label="Hard" className="data-[state=on]:text-blue-500">
+          <ToggleGroupItem
+            value="Hard"
+            aria-label="Hard"
+            className="data-[state=on]:text-blue-500"
+          >
             Hard
           </ToggleGroupItem>
         </ToggleGroup>
       </div>
+      <div className="text-3xl font-extralight text-neutral-800">|</div>
       <div className="flex items-center gap-2">
-        <p className="text-preset-5 text-neutral-400 pl-4 pr-4 pb-4">Mode:</p>
+        <p className="text-preset-5 text-neutral-400 pl-4 pr-4">Mode:</p>
         <ToggleGroup
           type="single"
           defaultValue="Timed"
           aria-label="Mode"
           variant="outline"
         >
-          <ToggleGroupItem value="Timed(60s" aria-label="Timed" className="data-[state=on]:text-blue-500">
+          <ToggleGroupItem
+            value="Timed(60s"
+            aria-label="Timed"
+            className="data-[state=on]:text-blue-500"
+          >
             Timed(60s)
           </ToggleGroupItem>
           <ToggleGroupItem value="Passage" aria-label="Passage">

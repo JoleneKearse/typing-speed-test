@@ -1,22 +1,44 @@
-import OptionButtons from "./OptionsButtons";
+import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 
 const SettingsLargeScreens = () => {
   return (
-    <section className="flex gap-16 items-center">
+    <section className="flex gap-16 items-center text-neutral-100">
       <div className="flex items-center gap-2">
         <p className="text-preset-5 text-neutral-400 pl-4 pr-2 pb-4">
           Difficulty:
         </p>
-        <OptionButtons text="Easy" id="easy-button" color="neutral-100" />
-        <OptionButtons text="Medium" id="medium-button" color="neutral-100" />
-        <OptionButtons text="Hard" id="hard-button" color="neutral-100" />
+        <ToggleGroup
+          type="single"
+          defaultValue="Hard"
+          aria-label="Difficulty"
+          variant="outline"
+        >
+          <ToggleGroupItem value="Easy" aria-label="Easy" className="data-[state=on]:text-blue-500">
+            Easy
+          </ToggleGroupItem>
+          <ToggleGroupItem value="Medium" aria-label="Medium" className="data-[state=on]:text-blue-500">
+            Medium
+          </ToggleGroupItem>
+          <ToggleGroupItem value="Hard" aria-label="Hard" className="data-[state=on]:text-blue-500">
+            Hard
+          </ToggleGroupItem>
+        </ToggleGroup>
       </div>
       <div className="flex items-center gap-2">
-        <p className="text-preset-5 text-neutral-400 pl-4 pr-4 pb-4">
-          Mode:
-        </p>
-        <OptionButtons text="Timed(60s)" id="timed-mode" color="neutral-100" />
-        <OptionButtons text="Passage" id="passage-mode" color="neutral-100" />
+        <p className="text-preset-5 text-neutral-400 pl-4 pr-4 pb-4">Mode:</p>
+        <ToggleGroup
+          type="single"
+          defaultValue="Timed"
+          aria-label="Mode"
+          variant="outline"
+        >
+          <ToggleGroupItem value="Timed(60s" aria-label="Timed" className="data-[state=on]:text-blue-500">
+            Timed(60s)
+          </ToggleGroupItem>
+          <ToggleGroupItem value="Passage" aria-label="Passage">
+            Passage
+          </ToggleGroupItem>
+        </ToggleGroup>
       </div>
     </section>
   );

@@ -4,7 +4,9 @@ const SettingsLargeScreens = () => {
   return (
     <section className="flex gap-16 lg:gap-4 items-center text-neutral-100">
       <div className="flex items-center gap-2">
-        <p className="text-preset-5 text-neutral-400 pl-4 lg:pl-0 pr-2 lg:pr-0">Difficulty:</p>
+        <p className="text-preset-5 text-neutral-400 pr-2 lg:pr-0">
+          Difficulty:
+        </p>
         <ToggleGroup
           type="single"
           defaultValue="Hard"
@@ -36,7 +38,9 @@ const SettingsLargeScreens = () => {
       </div>
       <div className="text-3xl font-extralight text-neutral-800">|</div>
       <div className="flex items-center gap-2">
-        <p className="text-preset-5 text-neutral-400 pl-4 lg:pl-0  pr-4">Mode:</p>
+        <p className="text-preset-5 text-neutral-400 pl-4 lg:pl-0  pr-4">
+          Mode:
+        </p>
         <ToggleGroup
           type="single"
           defaultValue="Timed(60s)"

@@ -1,6 +1,14 @@
+import { useSettings } from "@/hooks/useSettings";
+
+
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 
 const SettingsLargeScreens = () => {
+  const { difficulty, mode, setDifficulty, setMode } =
+    useSettings();
+
+    console.log(difficulty, mode);
+
   return (
     <section className="flex gap-16 lg:gap-4 items-center text-neutral-100">
       <div className="flex items-center gap-2">
@@ -9,7 +17,8 @@ const SettingsLargeScreens = () => {
         </p>
         <ToggleGroup
           type="single"
-          defaultValue="Hard"
+          value={difficulty}
+          onValueChange={setDifficulty}
           aria-label="Difficulty"
           variant="outline"
         >
@@ -43,7 +52,8 @@ const SettingsLargeScreens = () => {
         </p>
         <ToggleGroup
           type="single"
-          defaultValue="Timed(60s)"
+          value={mode}
+          onValueChange={setMode}
           aria-label="Mode"
           variant="outline"
         >

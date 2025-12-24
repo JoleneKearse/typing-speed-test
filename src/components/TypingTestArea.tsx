@@ -2,7 +2,7 @@ import passages from "..//../data.json";
 
 import { Button } from "./ui/button";
 
-const TypingTestArea = () => {
+const TypingTestArea = () => {// 0-9
   const handleClick = () => {
     const testingArea = document.getElementById(
       "testingArea"
@@ -28,6 +28,7 @@ const TypingTestArea = () => {
       >
         {passages.hard[9].text}
       </p>
+      {/* TODO: Move to TypingTestAreaOverlay once state is set up. */}
       <section
         className="absolute flex flex-col justify-center items-center gap-4"
         id="overlayContent"

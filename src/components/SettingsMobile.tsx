@@ -1,6 +1,12 @@
+import { useContext } from "react";
+
+import { SettingsContext } from "../context/SettingsContext";
+
 import OptionDropdown from "./OptionDropdown";
 
 const SettingsMobile = () => {
+  const { difficulty, mode, setDifficulty, setMode } = useContext(SettingsContext);
+  
   return (
     <section className="flex justify-center gap-8">
       <OptionDropdown

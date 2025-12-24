@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 const TypingTestArea = () => {
   const handleClick = () => {
     const testingArea = document.getElementById(
-      "testingAreaOverlay"
+      "testingArea"
     ) as HTMLTextAreaElement;
     const overlayContent = document.getElementById(
       "overlayContent"
@@ -23,8 +23,8 @@ const TypingTestArea = () => {
       onClick={handleClick}
     >
       <p
-        className="text-preset-regular-mobile md:text-preset-1 text-neutral-400 pt-250 blur-sm"
-        id="testingAreaOverlay"
+        className="text-preset-regular-mobile md:text-preset-regular text-neutral-400 pt-250 blur-sm"
+        id="testingArea"
       >
         {passages.hard[9].text}
       </p>

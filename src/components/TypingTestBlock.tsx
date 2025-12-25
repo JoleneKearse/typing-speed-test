@@ -4,12 +4,15 @@ import { getRandomPassage } from "@/lib/utils";
 import passages from "../../data.json";
 
 import { useSettings } from "@/hooks/useSettings";
+import { useTyping } from "@/hooks/useTyping";
 import TypingTestOverlay from "./TypingTestOverlay";
+import TypingTestTextarea from "./TypingTestTextarea";
 
 
 
 const TypingTestBlock = () => {
   const { difficulty } = useSettings();
+  const { isTestRunning, startTest } = useTyping();
   const shownPassage = passages[difficulty][getRandomPassage(difficulty)].text;
 
   const handleClick = () => {
@@ -23,11 +26,9 @@ const TypingTestBlock = () => {
       testingArea.classList.remove("blur-sm");
       overlayContent.style.display = "none";
     }
+    startTest();
+    testingArea.focus();
   };
-
-  // useEffect(() => {
-  //   shownPassage = passages[difficulty][getRandomPassage(difficulty)].text;
-  // }, [difficulty]);
 
   return (
     <article
@@ -36,12 +37,12 @@ const TypingTestBlock = () => {
       onClick={handleClick}
     >
       <p
-        className="text-preset-regular-mobile md:text-preset-regular text-neutral-400 blur-sm"
+        className="text-preset-regular-mobile md:text-preset-regular text-neutral-400 blur-sm relative"
         id="testingArea"
       >
         {shownPassage}
       </p>
-      <TypingTestOverlay />
+      {isTestRunning ? <TypingTestTextarea /> : <TypingTestOverlay />}
     </article>
   );
 };

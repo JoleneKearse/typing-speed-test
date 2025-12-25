@@ -8,3 +8,14 @@ export type SettingsContextType = {
   setDifficulty: (difficulty: Difficulty) => void;
   setMode: (mode: Mode) => void;
 };
+
+export type TypingContextType = {
+  wpm: number;
+  accuracy: number;
+  time: number;
+  errors: number;
+  isTestRunning: boolean;
+  startTest: () => void;
+  endTest: () => void;
+  resetTest: () => void;
+};

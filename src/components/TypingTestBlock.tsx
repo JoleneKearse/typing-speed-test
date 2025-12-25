@@ -1,8 +1,16 @@
-import passages from "..//../data.json";
+// import { useEffect } from "react";
+
+import { getRandomPassage } from "@/lib/utils";
+import passages from "../../data.json";
+
+import { useSettings } from "@/hooks/useSettings";
 
 import { Button } from "./ui/button";
 
-const TypingTestArea = () => {// 0-9
+const TypingTestBlock = () => {
+  const { difficulty } = useSettings();
+  const shownPassage = passages[difficulty][getRandomPassage(difficulty)].text;
+
   const handleClick = () => {
     const testingArea = document.getElementById(
       "testingArea"
@@ -16,6 +24,10 @@ const TypingTestArea = () => {// 0-9
     }
   };
 
+  // useEffect(() => {
+  //   shownPassage = passages[difficulty][getRandomPassage(difficulty)].text;
+  // }, [difficulty]);
+
   return (
     <article
       className="relative flex flex-col justify-center items-center text-preset-3-semibold"
@@ -26,7 +38,7 @@ const TypingTestArea = () => {// 0-9
         className="text-preset-regular-mobile md:text-preset-regular text-neutral-400 pt-250 blur-sm"
         id="testingArea"
       >
-        {passages.hard[9].text}
+        {shownPassage}
       </p>
       {/* TODO: Move to TypingTestAreaOverlay once state is set up. */}
       <section
@@ -45,4 +57,4 @@ const TypingTestArea = () => {// 0-9
   );
 };
 
-export default TypingTestArea;
+export default TypingTestBlock;

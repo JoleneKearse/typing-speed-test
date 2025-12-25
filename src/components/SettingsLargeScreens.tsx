@@ -1,13 +1,11 @@
 import { useSettings } from "@/hooks/useSettings";
 
-
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 
 const SettingsLargeScreens = () => {
-  const { difficulty, mode, setDifficulty, setMode } =
-    useSettings();
+  const { difficulty, mode, setDifficulty, setMode } = useSettings();
 
-    console.log(difficulty, mode);
+  console.log(difficulty, mode);
 
   return (
     <section className="flex gap-16 lg:gap-4 items-center text-neutral-100">
@@ -23,21 +21,21 @@ const SettingsLargeScreens = () => {
           variant="outline"
         >
           <ToggleGroupItem
-            value="Easy"
+            value="easy"
             aria-label="Easy"
             className="data-[state=on]:text-blue-500 hover:text-blue-500 focus:outline-2 focus:outline-blue-500 focus:text-neutral-100"
           >
             Easy
           </ToggleGroupItem>
           <ToggleGroupItem
-            value="Medium"
+            value="medium"
             aria-label="Medium"
             className="data-[state=on]:text-blue-500 hover:text-blue-500 focus:outline-2 focus:outline-blue-500 focus:text-neutral-100"
           >
             Medium
           </ToggleGroupItem>
           <ToggleGroupItem
-            value="Hard"
+            value="hard"
             aria-label="Hard"
             className="data-[state=on]:text-blue-500 hover:text-blue-500 focus:outline-2 focus:outline-blue-500 focus:text-neutral-100"
           >

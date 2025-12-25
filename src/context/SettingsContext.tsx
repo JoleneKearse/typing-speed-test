@@ -7,7 +7,7 @@ import type { SettingsContextType, Difficulty, Mode } from "../types/types";
 export const SettingsContext = createContext<SettingsContextType | null>(null);
 
 export const SettingsProvider = ({ children }: { children: ReactNode }) => {
-  const [difficulty, setDifficulty] = useState<Difficulty>("Hard");
+  const [difficulty, setDifficulty] = useState<Difficulty>("hard");
 
   const [mode, setMode] = useState<Mode>("Timed(60s)");
 

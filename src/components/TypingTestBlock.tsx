@@ -4,8 +4,9 @@ import { getRandomPassage } from "@/lib/utils";
 import passages from "../../data.json";
 
 import { useSettings } from "@/hooks/useSettings";
+import TypingTestOverlay from "./TypingTestOverlay";
 
-import { Button } from "./ui/button";
+
 
 const TypingTestBlock = () => {
   const { difficulty } = useSettings();
@@ -35,24 +36,12 @@ const TypingTestBlock = () => {
       onClick={handleClick}
     >
       <p
-        className="text-preset-regular-mobile md:text-preset-regular text-neutral-400 pt-250 blur-sm"
+        className="text-preset-regular-mobile md:text-preset-regular text-neutral-400 blur-sm"
         id="testingArea"
       >
         {shownPassage}
       </p>
-      {/* TODO: Move to TypingTestAreaOverlay once state is set up. */}
-      <section
-        className="absolute flex flex-col justify-center items-center gap-4"
-        id="overlayContent"
-      >
-        <Button
-          className=" text-neutral-100 bg-blue-500 mb-50 hover:bg-blue-400 focus:outline-2 focus:outline-blue-500 focus:text-neutral-100"
-          variant="secondary"
-        >
-          Start Typing Test
-        </Button>
-        <p className="text-neutral-100">Or click the text and start typing</p>
-      </section>
+      <TypingTestOverlay />
     </article>
   );
 };

@@ -103,18 +103,15 @@ In my `Stats` component, I was able to use `border-l` and `border-r` as expected
 
 I used a _very hacky_ solution in my `SettingsLargeScreens` component. I started trying to add a `-border-r` to one of the `<ToggleGroup>`s, but it didn't immediately appear. So, I got this _silly idea_ of styling a `|` instead. This worked really well so I let it be.
 
-## Sharing your solution
+## Intentional design changes
 
-There are multiple places you can share your solution:
+I decided to add a **horizontal line** at the bottom of the **Not Started** screen rather than just the top as it felt more consistent.
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+I also had my `handleClick` on the entire area to remove the text blur when the user decided to Start Typing Test.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
+This increases the UX as they know _where_ they can click.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+![alt text](image-2.png)
 
 ## Got feedback for us?
 
